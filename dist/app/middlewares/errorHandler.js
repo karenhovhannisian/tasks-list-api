@@ -16,9 +16,11 @@ exports.default = (err, req, res, next) => __awaiter(this, void 0, void 0, funct
     }
     const status = err.status || status_codes_1.BAD_REQUEST_CODE;
     const body = {};
-    Object.keys(err.errors).forEach((key) => {
-        body[key] = err.errors[key].msg;
-    });
+    if (err.errors) {
+        Object.keys(err.errors).forEach((key) => {
+            body[key] = err.errors[key].msg;
+        });
+    }
     return res.status(status).json({
         message: body,
         status: 'error'
