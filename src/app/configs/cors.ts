@@ -15,7 +15,7 @@ const corsOptions: any = {
             'Authorization'
         ],
         credentials: true,
-        origin: params.corsOrigins
+        origin: params.corsOrigins.split(',')
     }
 };
 

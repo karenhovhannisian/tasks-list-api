@@ -1,12 +1,17 @@
 {
-  "name": "ts-app",
+  "name": "tasks-list-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "lint": "tsc",
     "dev": "NODE_ENV=development nodemon",
-    "start": "NODE_ENV=development nodemon"
+    "start:prod": "NODE_ENV=production babel-node src/server.ts",
+    "start": "npm run start:prod"
+  },
+  "engines": {
+    "node": "10.16.0",
+    "npm": "6.10.0"
   },
   "keywords": [],
   "author": "",

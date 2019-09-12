@@ -2,6 +2,7 @@ import {
     apiPort,
     apiUrl,
     appUrl,
+    corsOrigins,
     tokenSecret
 } from '../helpers/config';
 
@@ -10,12 +11,14 @@ const params: any = {
         apiPort,
         apiUrl,
         appUrl,
+        corsOrigins,
         tokenSecret
     },
     production: {
         apiPort,
         apiUrl,
         appUrl,
+        corsOrigins,
         tokenSecret
     }
 };

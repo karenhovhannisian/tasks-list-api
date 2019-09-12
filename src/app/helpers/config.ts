@@ -13,3 +13,5 @@ export const appUrl: string = env.get('APP_URL').asString();
 export const apiPort: string = env.get('PORT').asString();
 
 export const tokenSecret: string = env.get('TOKEN_SECRET').asString();
+
+export const corsOrigins: string = env.get('CORS_ORIGINS').asString();
