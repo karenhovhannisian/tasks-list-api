@@ -6,8 +6,7 @@
   "scripts": {
     "lint": "tsc",
     "dev": "NODE_ENV=development nodemon",
-    "start": "NODE_ENV=production && npm run postinstall && node dist/server.js",
-    "postinstall": "tsc --sourceMap false"
+    "start": "NODE_ENV=production && node dist/server.js"
   },
   "engines": {
     "node": "10.16.3"
