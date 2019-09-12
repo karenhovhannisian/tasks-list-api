@@ -17,7 +17,6 @@ exports.default = {
         }
     },
     save: {
-        authentication: true,
         parseFormData: true,
         validation: {
             email: {
@@ -34,11 +33,8 @@ exports.default = {
             username: {
                 errorMessage: constants_1.REQUIRED_MESSAGE,
                 in: 'body'
-            },
+            }
         }
-    },
-    task: {
-        authentication: true
     }
 };
 //# sourceMappingURL=schemas.js.map

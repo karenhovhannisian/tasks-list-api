@@ -30,6 +30,7 @@ class TaskController {
             const payload = req.body;
             try {
                 const task = yield services_1.TaskService.getById(id);
+                payload.status = payload.status === 0 ? payload.status : 10;
                 const updatedTask = yield services_1.TaskService.update(task._id, payload);
                 return res.status(status_codes_1.CREATED_CODE).json(response_1.successResponse(updatedTask));
             }

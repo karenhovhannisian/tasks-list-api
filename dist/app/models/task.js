@@ -5,7 +5,7 @@ exports.default = () => {
     const TaskSchema = new mongoose_1.Schema({
         createdAt: { type: Date, index: true },
         email: { type: String, required: true },
-        status: { type: Number, default: 0, required: true },
+        status: { type: Number, enum: [0, 10], default: 0, required: true },
         text: { type: String, required: true },
         updatedAt: Date,
         username: { type: String, required: true }
