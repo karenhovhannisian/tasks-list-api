@@ -7,7 +7,7 @@
     "lint": "tsc",
     "dev": "NODE_ENV=development nodemon",
     "start:prod": "NODE_ENV=production babel-node src/server.ts",
-    "start": "npm run start:prod"
+    "start": "NODE_ENV=production babel-node src/server.ts"
   },
   "engines": {
     "node": "10.16.0",
