@@ -16,7 +16,6 @@ export default {
         }
     },
     save: {
-        authentication: true,
         parseFormData: true,
         validation: {
             email: {
@@ -33,10 +32,7 @@ export default {
             username: {
                 errorMessage: REQUIRED_MESSAGE,
                 in: 'body'
-            },
+            }
         }
-    },
-    task: {
-        authentication: true
     }
 };

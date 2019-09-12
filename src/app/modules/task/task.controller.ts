@@ -24,6 +24,7 @@ export class TaskController {
         const payload: ITaskUpdate = req.body;
         try {
             const task: ITask = await TaskService.getById(id);
+            payload.status = payload.status === 0 ? payload.status : 10;
 
             const updatedTask: ITask = await TaskService.update(task._id, payload);
 
