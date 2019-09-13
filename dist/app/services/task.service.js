@@ -67,7 +67,7 @@ class TaskService {
                 } }, { $project: { _id: 0 } });
             if (options.page) {
                 const skip = size * (Number(options.page) - 1);
-                query.push({ $project: { deals: { $slice: ['$tasks', skip, size] }, total_task_count: 1 } });
+                query.push({ $project: { tasks: { $slice: ['$tasks', skip, size] }, total_task_count: 1 } });
             }
             return Task.aggregate(query);
         });
