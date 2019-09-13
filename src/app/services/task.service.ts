@@ -67,7 +67,7 @@ export class TaskService {
             const skip: number = size * (Number(options.page) - 1);
 
             query.push(
-                { $project: { deals: { $slice: [ '$tasks', skip, size ] }, total_task_count: 1 } }
+                { $project: { tasks: { $slice: [ '$tasks', skip, size ] }, total_task_count: 1 } }
             );
         }
 
